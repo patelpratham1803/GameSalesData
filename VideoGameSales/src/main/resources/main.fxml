@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.videogamesales.MainController">
+    <children>
+        <StackPane prefHeight="600.0" prefWidth="800.0">
+            <!-- Table View -->
+            <TableView fx:id="tableView" visible="true" StackPane.alignment="CENTER">
+                <columns>
+                    <TableColumn fx:id="titleColumn" prefWidth="100.0" text="Title" />
+                    <TableColumn fx:id="platformColumn" prefWidth="100.0" text="Platform" />
+                    <TableColumn fx:id="yearColumn" prefWidth="100.0" text="Year" />
+                    <TableColumn fx:id="genreColumn" prefWidth="100.0" text="Genre" />
+                    <TableColumn fx:id="publisherColumn" prefWidth="100.0" text="Publisher" />
+                    <TableColumn fx:id="salesColumn" prefWidth="100.0" text="Global Sales" />
+                </columns>
+            </TableView>
+
+            <!-- Pie Chart -->
+            <PieChart fx:id="pieChart" visible="false" StackPane.alignment="CENTER" />
+        </StackPane>
+
+        <!-- Show Chart Button -->
+        <Button layoutX="14.0" layoutY="330.0" text="Show Chart" onAction="#handleShowChartButtonAction"/>
+    </children>
+</AnchorPane>
